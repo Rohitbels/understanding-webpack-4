@@ -1,0 +1,10 @@
+body {
+    color: red;
+    margin: 0;
+    background-color: darkgray;
+}
+
+h1 {
+    color: white;
+    text-shadow: 0 0 20px black;
+}

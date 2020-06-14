@@ -11,6 +11,22 @@ module.exports = {
         publicPath: "/"
     },
     devServer: {
-        contentBase: "dist"
+        contentBase: "dist",
+        hot: true
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader"
+                    }
+                ]
+            }
+        ]
     }
 }
