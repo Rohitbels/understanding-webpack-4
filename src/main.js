@@ -1,2 +1,2 @@
 require("./main.css");
-//alert("Rohit")
+require("./index.html")
