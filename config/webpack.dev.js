@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        main: "./src/main.js"
+        main: ["./src/main.js"]
     },
     mode: "development",
     output: {
@@ -16,6 +16,15 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: "babel-loader"
+                    }
+                ],
+                exclude: /node_modules/
+            },
             {
                 test: /\.css$/,
                 use: [
@@ -44,11 +53,11 @@ module.exports = {
                         options: {
                             attributes: {
                                 list: [
-                                  {
+                                {
                                     tag: 'img',
                                     attribute: 'src',
                                     type: 'src',
-                                  }
+                                }
                                 ]
                             }
                         }
